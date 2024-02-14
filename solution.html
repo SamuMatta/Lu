@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Surprise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('flowers-background.jpg'); /* Background image of flowers */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding-top: 50px; /* Add some padding to top for better visibility of content */
+        }
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #overlay-content {
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            color: #e60000;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff0066;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #cc004d;
+        }
+        .heart {
+            color: #ff0066;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <div id="overlay-content">
+            <img src="valentine.png" alt="Valentine's Day GIF" width="300">
+            <h1>Surprise for My Valentine</h1>
+            <p>¡Haga clic abajo para revelar su mensaje especial del Día de San Valentín!</p>
+            <button onclick="revealCard()">Clic Aqui</button>
+        </div>
+    </div>
+    <div id="valentine-card" style="display: none;">
+        <div class="heart">&#10084;</div>
+        <h1>Happy Valentine's Day!</h1>
+        <p>Para la mujer mas hermosa, inteligente y especial que conozco, 
+            espero que te guste tu carta virtual, te deseo lo mejor del
+            mundo mundial mi vida hermosa. Ya te dije, yo siempre voy a volver 
+            por vos mi amor. Y gracias por hacerme la persona mas feliz del mundo. Mi Lu hermosa &#10084
+        </p>
+        <p>Te amo, te extraño y te adoro con todo mi ser!</p>
+        <img src="valentine.gif" alt="Valentine's Day GIF" width="300">
+    </div>
+    <script>
+        function revealCard() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("valentine-card").style.display = "block";
+        }
+    </script>
+</body>
+</html>
